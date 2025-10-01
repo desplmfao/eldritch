@@ -1,0 +1,32 @@
+{
+   "name": "@eldritch-engine/benchmarks",
+   "version": "0.1.0-pre.alpha.1",
+   "private": true,
+   "exports": {
+      "./package.json": "./package.json",
+      ".": {
+         "source": "./src/index.ts",
+         "types": "./dist/index.ts",
+         "import": "./src/index.ts",
+         "require": "./src/index.ts"
+      },
+      "./*": {
+         "source": "./src/*.ts",
+         "types": "./dist/*.ts",
+         "import": "./src/*.ts",
+         "require": "./src/*.ts"
+      }
+   },
+   "dependencies": {
+      "@eldritch-engine/guerrero-core": "workspace:*",
+      "@eldritch-engine/math": "workspace:*",
+      "@eldritch-engine/reflect": "workspace:*",
+      "@eldritch-engine/type-utils": "workspace:*",
+      "@swc/core": "^1.13.20",
+      "mitata": "^1.0.34"
+   },
+   "devDependencies": {
+      "@eldritch-engine/builder": "workspace:*",
+      "@eldritch-engine/tsconfig": "workspace:*"
+   }
+}

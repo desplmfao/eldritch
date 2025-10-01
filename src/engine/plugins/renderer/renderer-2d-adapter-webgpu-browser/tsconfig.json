@@ -1,0 +1,26 @@
+{
+   "extends": "@eldritch-engine/tsconfig/base.json",
+   "include": [
+      "src/**/*.ts",
+      "bench/**/*.ts",
+      "tests/**/*.ts"
+   ],
+   "exclude": [
+      "node_modules/",
+      "*dist/",
+   ],
+   "compilerOptions": {
+      "outDir": "dist",
+      "declarationDir": "dist",
+      "rootDir": "src",
+      "baseUrl": ".",
+      "paths": {
+         "@self/*": [
+            "src/*"
+         ]
+      }
+   },
+   "types": [
+      "@webgpu/types"
+   ],
+}

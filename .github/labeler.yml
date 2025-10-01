@@ -1,0 +1,74 @@
+# this file configures the pull request labeler action.
+# labels are applied based on the paths of the modified files in a pr.
+
+# core project infrastructure
+ci:
+   - .github/**
+tooling:
+   - scripts/**
+   - bunfig.toml
+   - tsconfig.json
+   - pnpm-workspace.yaml
+   - .gitignore
+docs:
+   - docs-site/**
+   - README.md
+   - typedoc.base.json
+   - todo.md
+
+guerrero-core:
+   - src/engine/packages/guerrero/guerrero-core/**
+guerrero-aos:
+   - src/engine/packages/guerrero/guerrero-core-strategy-aos/**
+guerrero-soa:
+   - src/engine/packages/guerrero/guerrero-core-strategy-soa/**
+guerrero-native:
+   - src/engine/packages/guerrero/guerrero-core-strategy-native/**
+
+# shared packages
+build-system:
+   - src/shared/packages/builder/**
+filesystem:
+   - src/shared/packages/filesystem/**
+logger:
+   - src/shared/packages/logger/**
+reflect:
+   - src/shared/packages/reflect/**
+type-utils:
+   - src/shared/packages/type-utils/**
+utils:
+   - src/shared/packages/utils/**
+math:
+   - src/engine/packages/math/**
+
+# engine packages
+ecs-core:
+   - src/engine/packages/ecs/ecs-core/**
+ecs-backend-archetype:
+   - src/engine/packages/ecs/ecs-storage-backend-archetype/**
+ecs-backend-flcs:
+   - src/engine/packages/ecs/ecs-storage-backend-flcs/**
+ecs-tests:
+   - src/engine/packages/ecs/ecs-tests/**
+
+plugin-assets:
+   - src/engine/packages/plugins/assets/**
+plugin-audio:
+   - src/engine/packages/plugins/audio/**
+plugin-collision:
+   - src/engine/packages/plugins/collision/**
+plugin-core:
+   - src/engine/packages/plugins/core/**
+plugin-edict:
+   - src/engine/packages/plugins/edict/**
+plugin-input:
+   - src/engine/packages/plugins/input/**
+plugin-renderer:
+   - src/engine/packages/plugins/renderer/**
+plugin-editor:
+   - src/engine/packages/plugins/editor/**
+
+benchmarks:
+   - src/engine/packages/benchmarks/**
+examples:
+   - examples/**

@@ -1,0 +1,25 @@
+* text=auto eol=lf
+
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# lockfiles
+pnpm-lock.yaml linguist-generated=true
+
+# documentation
+docs/** linguist-generated=true
+docs-json/** linguist-generated=true
+docs-site/** linguist-documentation=true
+*.md linguist-documentation=true
+
+# examples
+examples/** linguist-vendored=false
+
+# assets
+assets/** linguist-vendored=false
+
+# tests
+tests/** linguist-vendored=false
+
+# scripts
+scripts/** linguist-vendored=false

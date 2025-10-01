@@ -1,0 +1,1 @@
+when soa is implemented figure out a way to have this library support both without having a hard dependency on either so we can have a soa package version and an aos package version

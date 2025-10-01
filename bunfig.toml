@@ -1,0 +1,6 @@
+logLevel = 'debug'
+
+[install]
+dev = true
+peer = true
+production = false

@@ -1,0 +1,26 @@
+{
+   "name": "eldritch-monorepo",
+   "version": "0.1.0-pre.alpha.1",
+   "description": "",
+   "private": true,
+   "files": [
+      "dist/",
+      "src/"
+   ],
+   "workspaces": [
+      "src/**"
+   ],
+   "scripts": {
+      "add_license_headers": "bun scripts/add_license_headers.ts"
+   },
+   "devDependencies": {
+      "@eldritch-engine/builder": "workspace:*",
+      "@eldritch-engine/builder-unplugin": "workspace:*",
+      "@eldritch-engine/tsconfig": "workspace:*",
+      "@eldritch-engine/utils": "workspace:*",
+      "@types/bun": "^1.2.23",
+      "@types/node": "^24.6.2",
+      "esbuild": "^0.25.10"
+   },
+   "pnpm": {}
+}

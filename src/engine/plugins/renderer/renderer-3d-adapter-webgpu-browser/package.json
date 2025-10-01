@@ -1,0 +1,41 @@
+{
+   "name": "@eldritch-engine/plugin-renderer-3d-adapter-webgpu-browser",
+   "version": "0.1.0-pre.alpha.1",
+   "description": "",
+   "license": "MPL-2.0",
+   "private": false,
+   "files": [
+      "dist/",
+      "src/"
+   ],
+   "exports": {
+      "./package.json": "./package.json",
+      ".": {
+         "source": "./src/index.ts",
+         "types": "./dist/index.ts",
+         "import": "./src/index.ts",
+         "require": "./src/index.ts"
+      },
+      "./*": {
+         "source": "./src/*.ts",
+         "types": "./dist/*.ts",
+         "import": "./src/*.ts",
+         "require": "./src/*.ts"
+      }
+   },
+   "dependencies": {
+      "@eldritch-engine/core-3d": "workspace:*",
+      "@eldritch-engine/ecs-core": "workspace:*",
+      "@eldritch-engine/guerrero-core": "workspace:*",
+      "@eldritch-engine/logger": "workspace:*",
+      "@eldritch-engine/math": "workspace:*",
+      "@eldritch-engine/plugin-renderer-3d-adapter-webgpu": "workspace:*",
+      "@eldritch-engine/plugin-renderer-3d-core": "workspace:*",
+      "@eldritch-engine/reflect": "workspace:*",
+      "@eldritch-engine/type-utils": "workspace:*"
+   },
+   "devDependencies": {
+      "@eldritch-engine/tsconfig": "workspace:*",
+      "mitata": "^1.0.34"
+   }
+}

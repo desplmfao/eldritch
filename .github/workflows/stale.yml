@@ -1,0 +1,43 @@
+# this workflow is used to automatically mark stale issues and pull requests, and close them if there is no activity
+
+name: close stale issues and prs
+
+on:
+   schedule:
+      - cron: "0 5 * * *" # run daily at 5:00 am
+
+permissions:
+   issues: write
+   pull-requests: write
+
+jobs:
+   stale:
+      runs-on: ubuntu-latest
+      steps:
+         - name: run stale action
+           uses: actions/stale@v9
+           with:
+              repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+              # configuration for issues
+              days-before-issue-stale: 90
+              days-before-issue-close: 14
+              stale-issue-label: "stale"
+              stale-issue-message: >
+                 this issue has been automatically marked as stale because it has not had
+                 recent activity. it will be closed if no further activity occurs. thank you
+                 for your contributions.
+
+              # configuration for pull requests
+              days-before-pr-stale: 90
+              days-before-pr-close: 14
+              stale-pr-label: "stale"
+              stale-pr-message: >
+                 this pull request has been automatically marked as stale because it has not had
+                 recent activity. it will be closed if no further activity occurs. thank you
+                 for your contributions.
+
+              # general configuration
+              exempt-all-assignees: true
+              exempt-draft-pr: true
+              operations-per-run: 30

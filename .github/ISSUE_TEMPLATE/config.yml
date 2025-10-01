@@ -1,0 +1,9 @@
+# this file configures the "new issue" page for the repository.
+# it guides users to the correct template for their submission.
+
+blank_issues_enabled: false # encourage users to use a template
+
+contact_links:
+   - name: ask a question or start a discussion
+     url: https://github.com/desplmfao/eldritch/discussions/new
+     about: please use github discussions for questions, ideas, or general conversation.

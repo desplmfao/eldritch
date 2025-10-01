@@ -1,0 +1,14 @@
+# common
+node_modules/
+*dist/
+__snapshots__
+__generated__
+*.tsbuildinfo
+
+# documentation
+/docs/
+/docs-json/
+
+# probably sensitive info
+.env*
+!.env*example

@@ -1,0 +1,37 @@
+{
+   "name": "@eldritch-engine/ecs-tests",
+   "version": "0.1.0-pre.alpha.1",
+   "description": "tests all of the ecs core backends",
+   "private": true,
+   "files": [
+      "dist/",
+      "src/"
+   ],
+   "exports": {
+      "./package.json": "./package.json",
+      ".": {
+         "source": "./src/index.ts",
+         "types": "./dist/index.ts",
+         "import": "./src/index.ts",
+         "require": "./src/index.ts"
+      },
+      "./*": {
+         "source": "./src/*.ts",
+         "types": "./dist/*.ts",
+         "import": "./src/*.ts",
+         "require": "./src/*.ts"
+      }
+   },
+   "dependencies": {
+      "@eldritch-engine/ecs-core": "workspace:*",
+      "@eldritch-engine/guerrero-core": "workspace:*",
+      "@eldritch-engine/logger": "workspace:*",
+      "@eldritch-engine/reflect": "workspace:*",
+      "@eldritch-engine/type-utils": "workspace:*",
+      "@eldritch-engine/utils": "workspace:*"
+   },
+   "devDependencies": {
+      "@eldritch-engine/tsconfig": "workspace:*",
+      "mitata": "^1.0.34"
+   }
+}

@@ -1,0 +1,2 @@
+world.count<MyComponent>(); api
+
